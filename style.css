@@ -1,0 +1,139 @@
+:root{
+  --bg:#ffffff;
+  --panel:#f7f5f5;
+  --text:#2b0000;
+  --red:#800000;
+  --gold:#d4af37;
+}
+
+*{box-sizing:border-box}
+
+body{
+  font-family:'Crimson Text', serif;
+  background:var(--bg);
+  color:var(--text);
+  margin:0;
+}
+
+.container{
+  max-width:1100px;
+  margin:0 auto;
+  padding:20px;
+}
+
+.menu{
+  position:sticky; top:0; z-index:1000;
+  display:flex; gap:24px; justify-content:center; align-items:center;
+  padding:16px 20px;
+  background:var(--red);
+  border-bottom:4px solid #5d0000;
+}
+.menu a{
+  color:var(--gold);
+  text-decoration:none;
+  font-weight:700;
+  letter-spacing:.4px;
+}
+.menu a:hover{opacity:.85}
+
+.titulo-principal{
+  text-align:center;
+  background:var(--panel);
+  padding:40px 24px;
+  border-radius:14px;
+  box-shadow:0 6px 18px rgba(0,0,0,.07);
+  margin:24px 0 28px;
+}
+.titulo-principal h1{
+  font-family:'Cinzel', serif;
+  margin:0 0 8px;
+  color:var(--red);
+  font-size:42px;
+}
+.titulo-principal p{margin:0;color:#3a0b0b}
+
+section{
+  background:var(--panel);
+  padding:24px;
+  border-radius:12px;
+  box-shadow:0 6px 18px rgba(0,0,0,.06);
+  margin:22px 0;
+}
+
+h2{
+  font-family:'Cinzel', serif;
+  color:var(--red);
+  margin:0 0 14px;
+  font-size:28px;
+}
+h3{margin:14px 0 10px; color:#3a0b0b}
+
+
+a{color:var(--red); font-weight:700; text-decoration:none}
+a:hover{color:#5d0000}
+
+
+.grid-filmes{
+  display:grid;
+  grid-template-columns:repeat(auto-fit,minmax(230px,1fr));
+  gap:18px;
+}
+.card{
+  background:#fff;
+  border:2px solid #f0e8d0;
+  border-radius:12px;
+  overflow:hidden;
+  display:flex; flex-direction:column;
+}
+.card img{width:100%; height:330px; object-fit:cover; display:block}
+.card .card-body{padding:14px}
+.badge{
+  display:inline-block; padding:4px 10px; border-radius:999px;
+  background:var(--gold); color:#3a0b0b; font-size:12px; font-weight:700;
+}
+
+
+.tabela-filmes table{
+  width:100%; border-collapse:collapse; background:#fff;
+}
+.tabela-filmes th, .tabela-filmes td{
+  border:2px solid #530303; padding:12px; text-align:left;
+}
+.tabela-filmes th{
+  background:var(--red); color:#f4f1f1;
+}
+.tabela-filmes tr:nth-child(even){background:#fcfcfc}
+.tabela-filmes tr:hover{background:#ffe5e5}
+
+
+.grid-personagens{
+  display:grid;
+  grid-template-columns:repeat(auto-fit,minmax(190px,1fr));
+  gap:16px;
+}
+.persona{
+  background:#fff; border:2px solid #f0e8d0; border-radius:12px; overflow:hidden;
+}
+.persona img{width:100%; height:230px; object-fit:cover; display:block}
+.persona .info{padding:12px}
+.persona .nome{
+  font-weight:700; color:var(--red);
+}
+.persona .ator{color:#503333; font-style:italic; font-size:14px}
+
+
+.filme-detalhe{
+  background:#fff; border:2px solid #f0e8d0; border-radius:12px;
+  padding:20px; margin:18px 0;
+}
+.resumo-label{font-weight:700; color:var(--red)}
+
+.rodape{
+  margin-top:28px;
+  text-align:center; padding:22px;
+  background:var(--red); color:var(--gold);
+}
+
+@media (max-width:640px){
+  .titulo-principal h1{font-size:32px}
+}
